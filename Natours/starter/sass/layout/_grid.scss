@@ -9,6 +9,13 @@
 
   @include clearfix;
 
+  //contain col
+  //[class*="col-"] {
+
+  //end with col
+  //[class$="col-"] {
+
+  //start with col
   [class^="col-"] {
     background-color: orangered;
     float: left;
