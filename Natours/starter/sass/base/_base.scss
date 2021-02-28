@@ -15,6 +15,7 @@ html {
   //}
 
 
+  //sizzy.co - show your webpage on too many devices good for testing
   @include respond(tab-land) {
     font-size: 56.25%    //1rem = 9px
   }
