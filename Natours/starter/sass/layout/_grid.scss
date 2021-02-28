@@ -5,6 +5,15 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-por) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-por) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -17,11 +26,19 @@
 
   //start with col
   [class^="col-"] {
-    //background-color: orangered;
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-por) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-por) {
+      width: 100% !important;
     }
   }
 
