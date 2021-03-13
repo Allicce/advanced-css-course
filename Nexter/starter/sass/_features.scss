@@ -3,6 +3,29 @@
   margin: 15rem 0;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 6rem;
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  // fix if the content is not the same height in each grid cell the gap between the element in cell can be different size
+  // because the default proprety for align-items is stretch
+  align-items: flex-start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1/  span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
 }
